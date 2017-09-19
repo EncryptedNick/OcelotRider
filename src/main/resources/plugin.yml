@@ -1,0 +1,3 @@
+name: OcelotRider
+version: ${project.version}
+main: net.encryptednick.ocelotrider.OcelotRider
