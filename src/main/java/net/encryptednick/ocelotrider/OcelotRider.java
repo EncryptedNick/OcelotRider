@@ -1,5 +1,6 @@
 package net.encryptednick.ocelotrider;
 
+import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -19,7 +20,7 @@ public final class OcelotRider extends JavaPlugin implements Listener {
         Player player = event.getPlayer();
 
         if (player.hasPermission("ocelotrider.ride")) {
-            if (event.getRightClicked().getType() == EntityType.valueOf("OCELOT")) {
+            if (event.getRightClicked().getType() == EntityType.valueOf("OCELOT") || player.getItemInHand().getType() == Material.SADDLE) {
                 event.getRightClicked().setPassenger(player);
             }
         }
